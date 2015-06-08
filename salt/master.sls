@@ -2,7 +2,7 @@
 
 salt-master:
 {% if salt_settings.install_packages %}
-  pkg.installed:
+  pkg.latest:
     - name: {{ salt_settings.salt_master }}
 {% endif %}
   file.recurse:
